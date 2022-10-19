@@ -114,14 +114,13 @@ def save_token(token):
 
 
 class StableDiffusion:
-    def __init__(self, token="", model_name="CompVis/stable-diffusion-v1-4"):
+    def __init__(self, token="", model_name="converted_models/converted_sd-v1-4.ckpt"):
         self.token = token
         if device == "cuda":
             text2img = StableDiffusionPipeline.from_pretrained(
                 model_name,
                 revision="fp16",
                 torch_dtype=torch.float16,
-                use_auth_token=token,
             ).to(device)
         else:
             text2img = StableDiffusionPipeline.from_pretrained(

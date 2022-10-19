@@ -15,4 +15,6 @@ gradio==3.4.0
 pytorch-lightning==1.7.7
 einops==0.4.1 
 omegaconf==2.2.3
+fpie
+
 
